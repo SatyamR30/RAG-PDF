@@ -1,0 +1,66 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Virtual environment
+.venv/
+env/
+venv/
+ENV/
+
+# IDE/editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+*.out
+*.err
+
+# Local database
+*.db
+*.sqlite3
+
+# Uploaded documents
+uploaded_docs/
+*.pdf
+*.docx
+*.txt
+
+# Environment variables
+.env
+
+# Byte-compiled / optimized / DLL files
+*.dll
+*.o
+*.a
+*.lo
+*.la
+*.class
+
+# Test cache / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.cache/
+
+# Docker
+*.pid
+*.seed
+*.pid.lock
+docker-compose.override.yml
+
+# Build/Packaging
+dist/
+build/
+*.egg-info/
+.eggs/
+
+# System files
+.DS_Store
+Thumbs.db
