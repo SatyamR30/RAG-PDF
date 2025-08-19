@@ -1,9 +1,8 @@
 import sqlite3
-
-DB_PATH = "metadata.db"
+from app.config import settings
 
 def init_db():
-    conn = sqlite3.connect(DB_PATH)
+    conn = sqlite3.connect(settings.DB_PATH)
     c = conn.cursor()
     c.execute("""CREATE TABLE IF NOT EXISTS documents (
                     id INTEGER PRIMARY KEY,
@@ -14,14 +13,14 @@ def init_db():
     conn.close()
 
 def insert_metadata(filename, filepath):
-    conn = sqlite3.connect(DB_PATH)
+    conn = sqlite3.connect(settings.DB_PATH)
     c = conn.cursor()
     c.execute("INSERT INTO documents (filename, filepath) VALUES (?, ?)", (filename, filepath))
     conn.commit()
     conn.close()
 
 def get_metadata():
-    conn = sqlite3.connect(DB_PATH)
+    conn = sqlite3.connect(settings.DB_PATH)
     c = conn.cursor()
     c.execute("SELECT * FROM documents")
     rows = c.fetchall()
